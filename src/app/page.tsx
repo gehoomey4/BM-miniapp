@@ -1,7 +1,6 @@
 'use client';
 
-import { TransactionButton } from '@coinbase/onchainkit/transaction';
-import { useAccount } from 'wagmi';
+import { useAccount, useWriteContract } from 'wagmi';
 import { parseEther } from 'viem';
 import { useState } from 'react';
 
@@ -18,7 +17,17 @@ const contractAbi = [
 
 export default function Home() {
   const { address } = useAccount();
+  const { writeContract } = useWriteContract();
   const [amount, setAmount] = useState('0.00001');
+
+  const handleSendTransaction = () => {
+    writeContract({
+      address: contractAddress,
+      abi: contractAbi,
+      functionName: 'sendBM',
+      value: parseEther(amount),
+    });
+  };
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
@@ -30,17 +39,12 @@ export default function Home() {
           onChange={(e) => setAmount(e.target.value)}
           className="mb-4 p-2 border border-gray-300 rounded text-center text-black"
         />
-        <TransactionButton
-          address={address}
-          to={contractAddress}
-          abi={contractAbi}
-          functionName="sendBM"
-          value={parseEther(amount)}
-          onTransactionSuccess={(receipt) => console.log('Transaction successful', receipt)}
-          onTransactionError={(error) => console.error('Transaction error', error)}
+        <button
+          onClick={handleSendTransaction}
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
         >
           Send BM
-        </TransactionButton>
+        </button>
       </div>
     </main>
   );
