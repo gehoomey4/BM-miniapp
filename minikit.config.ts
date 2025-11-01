@@ -7,7 +7,7 @@ export const minikitConfig = {
     payload: "",
     signature: ""
   },
-  frame: { // Using 'frame' as per the latest specification
+  frame: {
     version: "1",
     name: "BM",
     homeUrl: ROOT_URL,
@@ -25,4 +25,7 @@ export const minikitConfig = {
     ogDescription: "A Farcaster Mini App to register your presence onchain.",
     ogImageUrl: `${ROOT_URL}/splash.png`,
   },
+  baseBuilder: {
+    ownerAddress: "0xb0d96b8FceFF8b66F0FfefA39754Ce79B444Ec18"
+  }
 } as const;
