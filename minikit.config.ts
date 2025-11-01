@@ -7,17 +7,17 @@ export const minikitConfig = {
     payload: "",
     signature: ""
   },
-  miniapp: {
+  frame: { // Using 'frame' as per the latest specification
     version: "1",
     name: "BM",
-    subtitle: "Register your presence onchain",
-    description: "A Farcaster Mini App to register your presence by sending a transaction.",
-    screenshotUrls: [`${ROOT_URL}/screenshot.png`],
+    homeUrl: ROOT_URL,
     iconUrl: `${ROOT_URL}/icon.png`,
     splashImageUrl: `${ROOT_URL}/splash.png`,
     splashBackgroundColor: "#000000",
-    homeUrl: ROOT_URL,
     webhookUrl: `${ROOT_URL}/api/webhook`,
+    subtitle: "Register your presence onchain",
+    description: "A Farcaster Mini App to register your presence by sending a transaction.",
+    screenshotUrls: [`${ROOT_URL}/screenshot.png`],
     primaryCategory: "social",
     tags: ["onchain", "presence", "farcaster"],
     heroImageUrl: `${ROOT_URL}/splash.png`,
