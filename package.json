@@ -14,7 +14,8 @@
     "next": "14.2.3",
     "viem": "^2.9.23",
     "wagmi": "^2.5.20",
-    "@tanstack/react-query": "^5.32.1"
+    "@tanstack/react-query": "^5.32.1",
+    "@farcaster/miniapp-sdk": "^0.1.8"
   },
   "devDependencies": {
     "typescript": "^5",
