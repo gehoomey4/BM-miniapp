@@ -7,7 +7,7 @@ export const minikitConfig = {
     payload: "",
     signature: ""
   },
-  frame: {
+  miniapp: { // Reverting back to 'miniapp' for Base Build tool compatibility
     version: "1",
     name: "BM",
     homeUrl: ROOT_URL,

@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 
 export const GET = async () => {
   const manifest = {
-    ...minikitConfig.frame,
+    ...minikitConfig.miniapp, // Reverting back to 'miniapp'
     baseBuilder: minikitConfig.baseBuilder,
   };
   return NextResponse.json(manifest);
