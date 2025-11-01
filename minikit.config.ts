@@ -14,15 +14,15 @@ export const minikitConfig = {
     name: "BM",
     subtitle: "Register your presence onchain",
     description: "A Farcaster Mini App to register your presence by sending a transaction.",
-    screenshotUrls: [],
-    iconUrl: `${ROOT_URL}/icon.png`, // Placeholder icon
-    splashImageUrl: `${ROOT_URL}/splash.png`, // Placeholder splash
+    screenshotUrls: [`${ROOT_URL}/screenshot.png`],
+    iconUrl: `${ROOT_URL}/icon.png`,
+    splashImageUrl: `${ROOT_URL}/splash.png`,
     splashBackgroundColor: "#000000",
     homeUrl: ROOT_URL,
-    webhookUrl: `${ROOT_URL}/api/webhook`, // Placeholder webhook
+    webhookUrl: `${ROOT_URL}/api/webhook`,
     primaryCategory: "social",
     tags: ["onchain", "presence", "farcaster"],
-    heroImageUrl: `${ROOT_URL}/splash.png`, // Placeholder hero
+    heroImageUrl: `${ROOT_URL}/splash.png`,
     ogTitle: "BM - Register your presence",
     ogDescription: "A Farcaster Mini App to register your presence onchain.",
     ogImageUrl: `${ROOT_URL}/splash.png`,
